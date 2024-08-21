@@ -7,13 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		90DCECDB2C74CE19001C0805 /* TodoApp_TCAApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCECDA2C74CE19001C0805 /* TodoApp_TCAApp.swift */; };
+		90DCECDB2C74CE19001C0805 /* TodoApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCECDA2C74CE19001C0805 /* TodoApp.swift */; };
 		90DCECDD2C74CE19001C0805 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCECDC2C74CE19001C0805 /* ContentView.swift */; };
 		90DCECDF2C74CE1A001C0805 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DCECDE2C74CE1A001C0805 /* Assets.xcassets */; };
 		90DCECE22C74CE1A001C0805 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 90DCECE12C74CE1A001C0805 /* Preview Assets.xcassets */; };
 		90DCECEC2C74CE1A001C0805 /* TodoApp_TCATests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCECEB2C74CE1A001C0805 /* TodoApp_TCATests.swift */; };
 		90DCECF62C74CE1A001C0805 /* TodoApp_TCAUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCECF52C74CE1A001C0805 /* TodoApp_TCAUITests.swift */; };
 		90DCECF82C74CE1A001C0805 /* TodoApp_TCAUITestsLaunchTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 90DCECF72C74CE1A001C0805 /* TodoApp_TCAUITestsLaunchTests.swift */; };
+		90DCED0D2C75F181001C0805 /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = 90DCED0C2C75F181001C0805 /* ComposableArchitecture */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,7 +36,7 @@
 
 /* Begin PBXFileReference section */
 		90DCECD72C74CE19001C0805 /* TodoApp-TCA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "TodoApp-TCA.app"; sourceTree = BUILT_PRODUCTS_DIR; };
-		90DCECDA2C74CE19001C0805 /* TodoApp_TCAApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp_TCAApp.swift; sourceTree = "<group>"; };
+		90DCECDA2C74CE19001C0805 /* TodoApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TodoApp.swift; sourceTree = "<group>"; };
 		90DCECDC2C74CE19001C0805 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		90DCECDE2C74CE1A001C0805 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		90DCECE12C74CE1A001C0805 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
@@ -51,6 +52,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				90DCED0D2C75F181001C0805 /* ComposableArchitecture in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -94,7 +96,7 @@
 		90DCECD92C74CE19001C0805 /* TodoApp-TCA */ = {
 			isa = PBXGroup;
 			children = (
-				90DCECDA2C74CE19001C0805 /* TodoApp_TCAApp.swift */,
+				90DCECDA2C74CE19001C0805 /* TodoApp.swift */,
 				90DCECDC2C74CE19001C0805 /* ContentView.swift */,
 				90DCECDE2C74CE1A001C0805 /* Assets.xcassets */,
 				90DCECE02C74CE1A001C0805 /* Preview Content */,
@@ -141,8 +143,12 @@
 			buildRules = (
 			);
 			dependencies = (
+				90DCED0F2C75F18D001C0805 /* PBXTargetDependency */,
 			);
 			name = "TodoApp-TCA";
+			packageProductDependencies = (
+				90DCED0C2C75F181001C0805 /* ComposableArchitecture */,
+			);
 			productName = "TodoApp-TCA";
 			productReference = 90DCECD72C74CE19001C0805 /* TodoApp-TCA.app */;
 			productType = "com.apple.product-type.application";
@@ -215,6 +221,10 @@
 				Base,
 			);
 			mainGroup = 90DCECCE2C74CE19001C0805;
+			packageReferences = (
+				90DCED0A2C75F176001C0805 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */,
+				90DCED0B2C75F181001C0805 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
 			productRefGroup = 90DCECD82C74CE19001C0805 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -258,7 +268,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				90DCECDD2C74CE19001C0805 /* ContentView.swift in Sources */,
-				90DCECDB2C74CE19001C0805 /* TodoApp_TCAApp.swift in Sources */,
+				90DCECDB2C74CE19001C0805 /* TodoApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -291,6 +301,10 @@
 			isa = PBXTargetDependency;
 			target = 90DCECD62C74CE19001C0805 /* TodoApp-TCA */;
 			targetProxy = 90DCECF22C74CE1A001C0805 /* PBXContainerItemProxy */;
+		};
+		90DCED0F2C75F18D001C0805 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 90DCED0E2C75F18D001C0805 /* SwiftLintBuildToolPlugin */;
 		};
 /* End PBXTargetDependency section */
 
@@ -582,6 +596,38 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		90DCED0A2C75F176001C0805 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SimplyDanny/SwiftLintPlugins";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.56.1;
+			};
+		};
+		90DCED0B2C75F181001C0805 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.13.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		90DCED0C2C75F181001C0805 /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90DCED0B2C75F181001C0805 /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+		90DCED0E2C75F18D001C0805 /* SwiftLintBuildToolPlugin */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 90DCED0A2C75F176001C0805 /* XCRemoteSwiftPackageReference "SwiftLintPlugins" */;
+			productName = "plugin:SwiftLintBuildToolPlugin";
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 90DCECCF2C74CE19001C0805 /* Project object */;
 }
